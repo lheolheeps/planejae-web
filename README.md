@@ -1,6 +1,6 @@
 # Planejaê
 
-O Planejaê é um planejador de roteiro de viagem baseado no projeto desenvolvido na NLW Journey proporcionado pela empresa [Rocketseat](https://rocketseat.com.br/).
+Planejaê é um planejador de roteiro de viagem baseado no projeto desenvolvido na NLW Journey proporcionado pela empresa [Rocketseat](https://rocketseat.com.br/).
 
 A plataforma é composta de um [site](https://planejae.com.br/) em React, um [app](http://) em React Native e um [serviço Back-End](https://) em NodeJS.
 
