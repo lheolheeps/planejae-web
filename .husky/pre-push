@@ -1,0 +1,3 @@
+echo "[Husky] pre-push"
+# yarn test --passWithNoTests
+yarn build

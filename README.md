@@ -9,14 +9,15 @@ Para poder fazer uso, o usuário e seus convidados deverão fazer login utilizan
 ## Principais tecnologias utilizadas
 
   <!-- - [Firebase](https://firebase.google.com/) - [Authentication](https://firebase.google.com/docs/auth) e [Realtime Database](https://firebase.google.com/docs/database) -->
-  - [React](https://react.dev/)
-  - [Next](https://nextjs.org/)
-  - [Tailwind](https://tailwindcss.com/)
+
+- [React](https://react.dev/)
+- [Next](https://nextjs.org/)
+- [Tailwind](https://tailwindcss.com/)
 
 ## Instalação
 
 > Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/) e [Yarn](https://classic.yarnpkg.com/en/).
+> [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/) e [Yarn](https://classic.yarnpkg.com/en/).
 > Além disso é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/).
 
 ```bash

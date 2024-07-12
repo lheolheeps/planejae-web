@@ -1,0 +1,3 @@
+echo "[Husky] pre-commit"
+yarn lint
+yarn format
