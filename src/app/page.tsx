@@ -1,3 +1,3 @@
-export default function Home() {
-  return <p>Planejaê</p>;
-}
+import { Home } from "@containers";
+
+export default Home;
