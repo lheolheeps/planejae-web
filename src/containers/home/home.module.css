@@ -1,0 +1,100 @@
+.home {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.home:before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(var(--theme-primary));
+  opacity: 0.7;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(var(--theme-black), 0.85);
+}
+
+.content {
+  position: relative;
+  max-width: 40rem;
+  padding: 4rem 1.5rem;
+}
+
+.developedBy {
+  font-size: 0.8rem;
+}
+
+.developedBy a {
+  text-decoration: underline;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-style: italic;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.title img {
+  display: inline-flex;
+  margin-right: 0.5rem;
+}
+
+.description {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 992px) {
+  .container {
+    height: 100%;
+    width: 75vw;
+    min-height: 0;
+    padding-bottom: 0;
+  }
+
+  .container:before {
+    transform: skewX(-9deg);
+    transform-origin: top right;
+  }
+
+  .content {
+    padding: 0 9rem 0 2rem;
+  }
+
+  .title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (pointer: coarse) and (hover: none) {
+  .home {
+    background: url("/bg-mobile-fallback.jpg") rgb(var(--theme-primary))
+      no-repeat right center scroll;
+    background-size: cover;
+  }
+}

@@ -1,0 +1,34 @@
+.socialIcons {
+  position: relative;
+  z-index: 2;
+  /* margin-top: 3rem; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 100rem;
+  background-color: rgb(var(--theme-black));
+  border-color: rgb(var(--theme-black));
+  margin: 1rem;
+}
+
+@media (min-width: 992px) {
+  .socialIcons {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    right: 2.5rem;
+    width: auto;
+    flex-direction: column;
+    margin-top: 0;
+  }
+}

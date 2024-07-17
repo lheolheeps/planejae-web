@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --theme-primary: 48, 44, 94;
+  --theme-white: 255, 255, 255;
+  --theme-black: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--theme-white));
+  background: linear-gradient(to bottom, transparent, rgb(var(--theme-black)))
+    rgb(var(--theme-black));
+}
