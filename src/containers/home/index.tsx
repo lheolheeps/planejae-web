@@ -1,6 +1,10 @@
+import { getServerSession } from "next-auth";
 import { Indie_Flower, Tinos, DM_Sans } from "next/font/google";
 import Image from "next/image";
+import { redirect } from "next/navigation";
 
+import { GoogleSignInButton } from "@components";
+import { authOptions } from "@lib/next-auth";
 import cx from "classnames";
 
 import styles from "./home.module.css";
@@ -25,7 +29,10 @@ const dmsans = DM_Sans({
   subsets: ["latin"],
 });
 
-export function Home() {
+export async function Home() {
+  const session = await getServerSession(authOptions);
+  if (session) redirect("/viagens");
+
   return (
     <div className={styles.home}>
       <Video />
@@ -49,6 +56,7 @@ export function Home() {
             <br />
             Experimente, é de graça! \0/
           </p>
+          <GoogleSignInButton />
         </div>
       </div>
       <SocialIcons />

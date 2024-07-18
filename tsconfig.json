@@ -19,11 +19,14 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "@containers": ["./src/containers"],
+      "@components": ["./src/components"],
       "@constants/*": ["./src/constants/*"],
+      "@containers": ["./src/containers"],
       "@helpers": ["./src/helpers"],
-      "@services": ["./src/services"],
       "@hooks": ["./src/hooks"],
+      "@lib/*": ["./src/lib/*"],
+      "@providers": ["./src/providers"],
+      "@services": ["./src/services"],
       "@types": ["./src/types"]
     }
   },

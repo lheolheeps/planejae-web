@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+import { AuthProvider } from "@providers";
+
 export const metadata: Metadata = {
   title: "Planejaê: Seu próximo destino começa aqui!",
   description:
@@ -14,7 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body>{children}</body>
+      <body>
+        <AuthProvider>{children}</AuthProvider>
+      </body>
     </html>
   );
 }
