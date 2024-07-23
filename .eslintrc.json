@@ -24,6 +24,7 @@
     "no-console": "error",
     "react/prop-types": 0,
     "react/react-in-jsx-scope": "off",
+    "react-hooks/exhaustive-deps": "off",
     "import-helpers/order-imports": [
       "error",
       {

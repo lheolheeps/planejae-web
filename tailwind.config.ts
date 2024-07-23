@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         planejae: "#302C5E",
+        blackg: "#010409",
       },
     },
   },

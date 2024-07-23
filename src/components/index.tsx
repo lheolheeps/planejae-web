@@ -1,2 +1,3 @@
+export * from "./header";
 export * from "./google-sign-in-button";
-export * from "./sign-out-button";
+export * from "./profile";

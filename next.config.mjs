@@ -2,6 +2,15 @@
 const nextConfig = {
   trailingSlash: true,
   poweredByHeader: false,
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "*.googleusercontent.com",
+        port: "",
+      },
+    ],
+  },
   env: {
     API_HOST: process.env.API_HOST,
     GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID,

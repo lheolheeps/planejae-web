@@ -1,24 +1,27 @@
-import { getServerSession } from "next-auth";
+import { Metadata } from "next";
 import { redirect } from "next/navigation";
 
-import { SignOutButton } from "@components";
-import { authOptions } from "@lib/next-auth";
+import { Header } from "@components";
+import { getUserSession } from "@lib/next-auth";
+
+export const metadata: Metadata = {
+  title: "Viagens - Planejaê",
+  description:
+    "Planejaê é a ferramenta definitiva para você e seus amigos planejarem o roteiro e organizar os detalhes de suas aventuras.",
+};
 
 export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const session = await getServerSession(authOptions);
-  if (!session) redirect("/");
+  const user = await getUserSession();
+  if (!user) redirect("/");
 
   return (
-    <div className="px-4 py-2">
-      <div className="flex items-center justify-between gap-2 w-full mb-4">
-        <h1>Viagens</h1>
-        <SignOutButton />
-      </div>
-      {children}
+    <div className="bg-blackg">
+      <Header user={user} />
+      <div className="p-4">{children}</div>
     </div>
   );
 }

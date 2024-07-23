@@ -91,6 +91,15 @@
   }
 }
 
+@media (max-width: 992px) {
+  .home {
+    height: calc(100vh - 3.5rem);
+    background: url("/bg-mobile-fallback.jpg") rgb(var(--theme-primary))
+      no-repeat right center scroll;
+    background-size: cover;
+  }
+}
+
 @media (pointer: coarse) and (hover: none) {
   .home {
     background: url("/bg-mobile-fallback.jpg") rgb(var(--theme-primary))
