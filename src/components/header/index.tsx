@@ -17,10 +17,10 @@ const indie = Indie_Flower({
 export function Header({ user }: HeaderProps) {
   return (
     <>
-      <div className="w-full p-4">
+      <div className="w-full py-3 px-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2 text-4xl">
-            <Image src="/icon.png" alt="" width={40} height={40} />
+          <div className="flex items-center gap-2 text-2xl">
+            <Image src="/icon.png" alt="" width={32} height={32} />
             <span className={indie.className}>Planejaê</span>
           </div>
           <Profile user={user} />

@@ -41,7 +41,7 @@ export function Profile({ user }: ProfileProps) {
     <div className="flex items-center gap-4">
       <button
         onClick={handlePremium}
-        className="border-2 rounded-md p-2 bg-planejae hover:bg-black hover:border-planejae"
+        className="border-2 rounded-md py-1 px-4 bg-planejae hover:bg-black hover:border-planejae text-sm"
       >
         ASSINAR PREMIUM
       </button>
@@ -54,8 +54,8 @@ export function Profile({ user }: ProfileProps) {
         >
           <Image
             alt=""
-            width={40}
-            height={40}
+            width={32}
+            height={32}
             src={user?.image || "/profile.png"}
             className="rounded-full object-cover"
           />
