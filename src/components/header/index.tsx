@@ -1,8 +1,11 @@
 import { Indie_Flower } from "next/font/google";
 import Image from "next/image";
 
-import { Profile } from "@components";
 import { User } from "@types";
+
+import { Menu } from "./menu";
+import { MobileMenu } from "./mobile-menu";
+import { Profile } from "./profile";
 
 type HeaderProps = {
   user: User;
@@ -17,16 +20,20 @@ const indie = Indie_Flower({
 export function Header({ user }: HeaderProps) {
   return (
     <>
-      <div className="w-full p-4">
+      <div className="w-full py-3 px-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2 text-4xl">
-            <Image src="/icon.png" alt="" width={40} height={40} />
+          <div className="flex items-center gap-2 text-2xl">
+            <MobileMenu />
+            <Image src="/icon.png" alt="" width={32} height={32} />
             <span className={indie.className}>Planejaê</span>
           </div>
-          <Profile user={user} />
+          <div className="flex items-center gap-4">
+            <Menu />
+            <Profile user={user} />
+          </div>
         </div>
       </div>
-      <hr />
+      <hr className="border-zinc-500" />
     </>
   );
 }
