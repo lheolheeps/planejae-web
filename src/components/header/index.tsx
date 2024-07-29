@@ -1,11 +1,9 @@
 import { Indie_Flower } from "next/font/google";
 import Image from "next/image";
-import Link from "next/link";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { User } from "@types";
 
-import { MENU } from "./constants";
+import { Menu } from "./menu";
 import { MobileMenu } from "./mobile-menu";
 import { Profile } from "./profile";
 
@@ -30,23 +28,12 @@ export function Header({ user }: HeaderProps) {
             <span className={indie.className}>Planejaê</span>
           </div>
           <div className="flex items-center gap-4">
-            <ul className="gap-4 hidden md:flex md:items-center">
-              {MENU.map((item, idx) => (
-                <li key={`menu-${idx}`} className="text-zinc-400">
-                  <Link className={item.className} href={item.href}>
-                    {item.showIconOnDesktop && (
-                      <FontAwesomeIcon icon={item.icon} width={16} />
-                    )}
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <Menu />
             <Profile user={user} />
           </div>
         </div>
       </div>
-      <hr className="border-zinc-400" />
+      <hr className="border-zinc-500" />
     </>
   );
 }

@@ -53,18 +53,18 @@ export function Profile({ user }: ProfileProps) {
       </a>
 
       {isDropdownOpen && (
-        <div className="absolute right-0 mt-2 w-40 bg-planejae rounded-md shadow-lg py-2">
+        <div className="absolute z-10 right-0 mt-2 w-40 bg-zinc-900 rounded-md shadow-lg py-2 border border-zinc-500">
           <button
             onClick={handleSignOut}
-            className="flex items-center gap-2 py-2 px-3 hover:bg-slate-500 w-full"
+            className="flex items-center gap-2 py-2 px-3 hover:bg-planejae w-full"
           >
             <FontAwesomeIcon icon={faSignOut} width={24} />
             <span>Sair</span>
           </button>
-          <hr className="mb-2 mt-2" />
+          <hr className="mb-2 mt-2 border-zinc-500" />
           <button
             onClick={handleDeleteAccount}
-            className="flex items-center gap-2 py-2 px-3 hover:bg-slate-500 w-full"
+            className="flex items-center gap-2 py-2 px-3 hover:bg-planejae w-full"
           >
             <FontAwesomeIcon icon={faTrashAlt} width={24} />
             <span>Excluir Conta</span>
