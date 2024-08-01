@@ -22,8 +22,10 @@ export function Header({ user }: HeaderProps) {
     <>
       <div className="w-full py-3 px-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2 text-2xl">
+          <div className="text-2xl md:hidden">
             <MobileMenu />
+          </div>
+          <div className="flex items-center gap-2 text-2xl">
             <Image src="/icon.png" alt="" width={32} height={32} />
             <span className={indie.className}>Planejaê</span>
           </div>

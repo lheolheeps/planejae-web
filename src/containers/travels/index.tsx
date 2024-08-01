@@ -7,6 +7,9 @@ import {
   faPlus,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import cn from "classnames";
+
+import styles from "./travels.module.css";
 
 const MOCK = [
   {
@@ -17,19 +20,29 @@ const MOCK = [
     destination: "Blumenau, Brasil",
     period: "16 de Agosto a 26 de Agosto",
   },
+  {
+    destination: "Porto Alegre, Brasil",
+    period: "16 de Setembro a 26 de Setembro",
+  },
+  {
+    destination: "Salvador, Brasil",
+    period: "16 de Dezembro a 26 de Dezembro",
+  },
 ];
 
 export function Travels() {
   return (
     <>
-      <div className="flex justify-between items-center mb-4">
+      <div
+        className={cn(styles.pageTitle, "flex gap-2 flex-col justify-between")}
+      >
         <h1 className="text-2xl text-zinc-50">Próximas Viagens</h1>
         <Button href="/viagens/nova" label="Nova Viagem" icon={faPlus} />
       </div>
       <div className="rounded-md border border-zinc-500 bg-zinc-900">
         {MOCK.map((travel, idx) => (
           <Fragment key={`viagem-${idx}`}>
-            <div className="p-3 cursor-pointer">
+            <div className="p-2 cursor-pointer">
               <div className="flex items-center justify-between mb-2">
                 <p className="flex items-center gap-2">
                   <FontAwesomeIcon icon={faLocationDot} width={16} />

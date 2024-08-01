@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Fragment, useEffect, useRef } from "react";
 
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useToggle } from "@hooks";
 
@@ -29,15 +29,18 @@ export function MobileMenu() {
   }, []);
 
   return (
-    <div className="relative md:hidden" ref={dropdownRef}>
-      <a
-        href="#!"
+    <div className="relative" ref={dropdownRef}>
+      <button
         onClick={handleDropdown}
         aria-label="Abrir menu de opções"
-        className="px-2 rounded-md border border-zinc-500 hover:border-white text-zinc-500 hover:text-white"
+        className="px-2 rounded-md border border-zinc-500 text-zinc-500"
       >
-        <FontAwesomeIcon icon={faBars} width={14} height={14} />
-      </a>
+        <FontAwesomeIcon
+          icon={isDropdownOpen ? faClose : faBars}
+          width={14}
+          height={14}
+        />
+      </button>
 
       {isDropdownOpen && (
         <div className="absolute z-10 left-0 mt-2 w-52 bg-zinc-900 rounded-md shadow-lg py-2 text-base border border-zinc-500">

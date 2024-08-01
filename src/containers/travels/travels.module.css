@@ -1,0 +1,10 @@
+.pageTitle {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .pageTitle {
+    align-items: center;
+    flex-direction: row;
+  }
+}
