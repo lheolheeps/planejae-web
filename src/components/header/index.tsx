@@ -20,7 +20,7 @@ const indie = Indie_Flower({
 export function Header({ user }: HeaderProps) {
   return (
     <>
-      <div className="w-full py-3 px-4">
+      <div className="w-full py-3 px-4 bg-zinc-900">
         <div className="flex items-center justify-between">
           <div className="text-2xl md:hidden">
             <MobileMenu />
@@ -35,7 +35,6 @@ export function Header({ user }: HeaderProps) {
           </div>
         </div>
       </div>
-      <hr className="border-zinc-500" />
     </>
   );
 }

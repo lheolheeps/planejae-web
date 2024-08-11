@@ -38,10 +38,11 @@ export async function Home() {
       <div className={styles.container}>
         <div className={styles.content}>
           <span className={styles.developedBy}>
-            Com carinho, por{" "}
+            Feito por{" "}
             <a href="https://felipeassuncao.com" target="_blank">
               <i>{`Felipe Assunção'`}</i>
             </a>
+            , mochileiro de escritório
           </span>
           <h1 className={cx(styles.title, tinos.className)}>
             <Image src="/icon.png" alt="" width={40} height={40} />

@@ -19,13 +19,13 @@ export default async function RootLayout({
   if (!user) redirect("/");
 
   return (
-    <div className="bg-zinc-950 flex flex-col h-screen">
+    <div className="bg-zinc-950 flex flex-col h-[calc(100vh-57.6px)] md:h-screen">
       <Header user={user} />
       <div className="p-4 flex justify-center flex-1">
         <div className="max-w-5xl w-full">{children}</div>
       </div>
       <div className="border-t-2 border-zinc-500 p-2 flex justify-center">
-        Com carinho, por&nbsp;
+        Feito por&nbsp;
         <a
           className="underline italic"
           href="https://felipeassuncao.com"
@@ -33,6 +33,7 @@ export default async function RootLayout({
         >
           Felipe Assunção{`'`}
         </a>
+        , mochileiro de escritório
       </div>
     </div>
   );
